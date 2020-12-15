@@ -1,1 +1,1 @@
-## Experiment name
+## Speed Control of DC motor by Armature Resistance Control
