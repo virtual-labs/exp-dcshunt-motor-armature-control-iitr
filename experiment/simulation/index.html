@@ -1,14 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
 <html>
+<head>
+<title>
+ Speed Control of DC motor by armature resistance control </title>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
+      <!--  <link href="//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+-->
+      
+        <link rel="stylesheet" href="demo1.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+padding:0px;
+margin:0px;
 
-
-    <body >
-
+}
+.column70 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
   
-           <a href="main.html" target="_new">Click Here To Go To The Simulation Page.</a>
-            
+}
+.column501 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+  
+}
+* {
+  box-sizing: border-box;
+}
+ #wrapper {
+  width:100%;
+}
 
-        
-    </body>
+div
+{
+  resize: both;
+  overflow: ;
+}
+#wrapper {
+  width:100%;
+}
+.column60 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  
+}
+
+.column40 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid;
+  border-left: none;
+  
+}
+.column401 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+  
+}
+.column20 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+}
+.column30 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+}
+.column301 {
+  float: left;
+  width: 70%;
+  padding: 10px;
+  height: 300px;
+  border-style: solid; 
+  border-right: : none;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rotorOuter
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.rotorInner
+  {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+  }
+.autoTrasformerouter
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.autoTransformerinner
+  {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+
+  }
+#check-button {
+padding:10px 27px;
+}
+#reset {
+padding:10px 30px;
+}
+img.autoTrasformerouter
+{
+  width:75%; 
+}
+img.autoTransformerinner
+{
+  width:60%; 
+}
+
+  .voltMeter {
+  position:relative;
+  }
+  #volt_reader {
+  position:absolute;
+  top:7.5em;
+  left:20em;
+  text-align:center;
+  }
+  .niddle{
+  position:absolute;
+  top:60px;
+  left:551.5px;
+  }
+  .amMeter {
+  position:relative;
+  }
+  .voltMeter {
+  position:relative;
+  }
+  #amme_reader {
+  position:absolute;
+  top:7.5em;
+  left:31em;
+  text-align:center;
+  }
+  .niddle1{
+  position:absolute;
+  top:60px;
+  left:378.2px;
+  }
+  .machine{
+  border-style:solid;
+  }
+  .rotate1 {
+  padding:15px;
+  }
+  .rotate
+  {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    animation: rotations 0s infinite linear;
+
+  }
+  @keyframes rotations {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+#currentPointerValue1 {
+position:absolute;
+top:5em;
+left:43em;
+}
+
+.slider1 {
+  -webkit-appearance: none;
+  width: 16.3%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  top:21em;
+  left:3em;
+  position:absolute;
+  opacity:2;
+}
+
+.slider1:hover {
+  opacity: 3;
+}
+
+.slider1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+.slider1::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 16.3%;
+  height: 3px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  top:29em;
+  left:3em;
+  position:absolute;
+  opacity:2;
+}
+
+.slider:hover {
+  opacity: 3;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('Slider.png');
+  cursor: pointer;
+}
+
+.dropbtn {
+    background-color: #27d447;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	   vertical-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #ECF0F5;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px #ECF0F5;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: rgb(0,0,225);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	text-align: left;
+    vertical-align: left;
+	  width:16em;
+	  height:30em;
+	  overflow-x:auto;
+	  overflow-y:auto;
+
+}
+
+.dropdown a:hover {background-color: #ECF0F5}
+
+.show {display:block;}
+
+
+</style>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script></head>
+
+
+
+</head>
+<body onload="disab()">
+
+  <div class="jtk-demo-main" data-demo-id="animation" >
+    <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
+      <div id="wrapper" style="position:absolute; top:10px;width:1000px;left:200px">
+        <div class="littledot" id="ld1"></br></br><a href="#" class="cmdLink detach" rel="ld1"></a>
+        </div>
+        <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2"></a>
+        </div><!--
+        <div class="littledot" id="ld3"></br></br><a href="#" class="cmdLink detach" rel="ld3"></a>3
+        </div>-->
+        <div class="littledot" id="ld4"></br></br><a href="#" class="cmdLink detach" rel="ld4"></a>
+        </div>
+        <div class="littledot" id="ld5"></br></br><a href="#" class="cmdLink detach" rel="ld5"></a>
+        </div>
+        <div class="littledot" id="ld6"></br></br><a href="#" class="cmdLink detach" rel="ld6"></a>
+        </div>
+        <div class="littledot" id="ld7"></br></br><a href="#" class="cmdLink detach" rel="ld7"></a>
+        </div>
+		
+        <div class="littledot" id="ld8"></br></br><a href="#" class="cmdLink detach" rel="ld8"></a>
+        </div>
+        <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9"></a>
+        </div>
+        <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10"></a>
+        </div>
+        <div class="littledot" id="ld11"></br></br><a href="#" class="cmdLink detach" rel="ld11"></a>
+        </div>
+		
+        <div class="littledot" id="ld12"></br></br><a href="#" class="cmdLink detach" rel="ld12"></a>
+        </div>
+        <div class="littledot" id="ld13"></br></br><a href="#" class="cmdLink detach" rel="ld13"></a>
+        </div>
+        <div class="littledot" id="ld14"></br></br><a href="#" class="cmdLink detach" rel="ld14"></a>
+        </div>
+        <div class="littledot" id="ld15"></br></br><a href="#" class="cmdLink detach" rel="ld15"></a>
+        </div>
+		
+        <div class="littledot" id="ld16"></br></br><a href="#" class="cmdLink detach" rel="ld16"></a>
+        </div>
+        <div class="littledot" id="ld17"></br></br><a href="#" class="cmdLink detach" rel="ld17"></a>
+        </div>
+        <div class="littledot" id="ld18"></br></br><a href="#" class="cmdLink detach" rel="ld18"></a>
+        </div>
+
+		
+        <div class="row">
+          <div class="column30" >
+            <img id="myimage" class="mcbSwitch" src="mcb1.png" alt="MCB Switch" onclick="mcbonoff();" width="70" height="120">
+          </div>
+		 
+		  <div class="boxed" width="60" height="40" style="position: absolute;;left: 6em;top: 04em;">
+    <img src="push1.png" id="led_l" height="50px"  />
+    <img src="push1.png" id="led_f" height="50px"  />
+    <img src="push1.png" id="led_a" height="50px"  />
+</div>
+          <div class="column70" id="movers-row" >
+            <img class="voltMeter" src="V Meter.png" alt="Voltmeter" width="170" height="170">
+			
+			<div style="position: absolute;top:-2em;left: 16em;">
+        <svg class="meter">
+          <polygon class="meter-clock" points="129,145 137,90 145,145"></polygon>
+          <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+        </svg>
+      </div>
+			<!--<img id="needle1" class="niddle1" src= niddle.png width="09" height="55">-->
+			<input id="volt_reader" type="text" size="13" style="position:absolute;">
+            <img class="amMeter" src="A meter.png" alt="Ammeter" width="170" height="170">
+			<!--<img id="needle" class="niddle" src= niddle.png width="09" height="55">-->
+			<div>
+          <svg class="meter" style="position: absolute;top:-2em;left: 27em;">
+            <polygon class="meter-clock2" points="129,145 137,90 145,145"></polygon>
+            <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+          </svg>
+          </div>
+			<input id="amme_reader" type="text" size="14" style="position:absolute;">
+			<div id="currentPointerValue1">
+			<input id="currentPointerValue" type="text" size="15" style="text-align:center; height:3.5em;  border:5px solid black"><br>
+			<b>&ensp;&ensp;&ensp;Speedometer</b>
+			</div>
+			<div style="position:absolute;left:56em;top:6em;">
+				<button id="check-button" >Check</button><br>
+				<style>
+				#check-button {
+
+    background-color: #27d447;
+    color: white;
+	}
+	#check-button:hover,#check-button:focus {
+    background-color: #3e8e41;
+}
+	</style>
+
+
+			</div>
+			<div style="position:absolute;left:56em;top:10em;">
+			<input id="reset" type="reset" onclick="window.location.href = 'main.html';" value="Reset" size="15">
+			<style>
+				#reset{
+            background-color: #27d447;
+          color: white;
+	}
+	#reset:hover,	#reset:focus {
+    background-color: #3e8e41;
+}
+
+		</style>
+</div>
+<div style="position:absolute;left:56em;top:14em;">
+	
+            <button id="btn_table" onclick="AddData()" >&nbsp;Add to Table&nbsp;</button>
+			<style>
+				#btn_table{
+
+    background-color: #27d447;
+    color: white;
+	height:3.2em;
+	}
+		#btn_table:hover,	#btn_table:focus {
+    background-color: #3e8e41;
+}
+	</style>
+          </div>
+          </div>
+			
+
+			<!--
+          <div style="position:absolute;left:55.4em;top:15em;">
+            <button id="check-button" >Check</button>
+            <input id="reset" type="reset" onclick="window.location.href = 'home.html';" value="Reset">
+          </div>
+		  -->
+      </div>
+      <div class="row">
+        <div class="column30">
+      <!--      <br/>
+            <br/>
+            <br/>
+          <div style="position: relative; left: 0;">
+          <img src="Autotransformerouter.png" class="autoTrasformerouter" />
+          <img src="Autotransformerinner.png" class="autoTransformerinner"/>
+          </div>-->
+          <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px;position:relative;opacity:1">
+		<div id="currentValue_fix" onclick="fun_error()">        
+		<input type="range" class="slider1" id="currentValue_fixed" value="0" min="0" max="8">
+		  </div>
+		  <img class="resistanceBox" src="rheostate.png" alt="Ammeter Rheostat" width="250" height="100" style="margin-left:10px; margin-top:30px; position:relative;opacity:1">
+		<div onclick="currentValue_below()">	
+		<input type="range" class="slider" id="currentValue" value="1" min="1" max="8">
+        </div>    
+		</div>
+        <div class="column301" >
+          <div  class="machine" style="position: relative; left:32em; top:3em; boder-style:solid;margin-left: 0px;width: 10em;  ">
+              <img src="rotor part 1.png" class="rotate1" height="150px"  />
+              <img src="rotor part 2.png" class="rotate" id="cirmover2" height="50px" style="position: absolute;
+                top: 50px;
+                left: 50px;
+"	/>
+            </div>
+            <div id="box1" class="boxed" style="position: relative; left: 8.5em ;top:-9.3em;width: 18em;height: 14.5em;border: solid;">
+            <div id ="box2"class="boxed" style="position: relative; left: 1em ;top:2.0em;width: 16em;height: 10.5em;">
+		   <img src="motor1.png" id="motor" style="position: absolute; left:1em; top:-.1em; length:9em;width:13em;boder-style:solid;margin-left: 0px; "/>
+		   <!--this style is used for flipping a image-->
+		   <style>
+		   #motor{
+		     -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+		   }
+		   </style>
+            </div>
+          </div>
+        </div>
+        <div class="column401"
+        <div id="table" style="background-color: #ecf0f5;position:absolute; top:37.29em;width:312px;height:300px;left:-.em; overflow-y: auto;">
+		<div>
+		<table>
+		<tr>
+		<td><b>OBSERVATION TABLE</B></td>
+		<td>&nbsp;<button id="graphmake" onclick="makegraph();">Create Graph </button></td>
+		</tr>
+		</table>
+		<style>
+				#graphmake{
+            background-color: #27d447;
+          color: white;
+	}
+	
+	#graphmake:hover,#graphmake:focus {
+    background-color: #3e8e41;
+}
+	
+		</style>
+	
+		</div>
+		<form>
+			<table id="mytable" width="260" border="1" style="text-align:center" >
+				<tr>
+					<th width="25">SNo.</th>
+					<th width="25">Voltage</th>
+					<th width="25">Speed</th>
+				</tr>
+			</table>
+		</form>
+		
+		</div> 
+	
+         
+        </div>
+		<div class="column501"
+        <div id="graph" style=" position:absolute; top:37.29em;width:720px;height:300px;left:18.5em; ">
+		<div id="print1">
+		<button id="prints"onclick="myFunction()"> Print</button>
+		<style>
+				#prints{
+            background-color:#27d447;
+          color: white;
+	height:3.2em;
+	width:7em;
+	}
+	#prints:hover, #prints:focus {
+    background-color: #3e8e41;
+}
+
+		</style>
+		<style>
+	
+		
+		#print1{
+		position:absolute;
+		top:14.8em;
+		left:37em;
+		}
+		</style>
+		<script>
+function myFunction() {
+  window.print();
+}
+</script>
+</div>
+	
+		</div>  		 
+        </div>
+      </div>
+    </div>
+  </div> 
+  
+</div> 
+
+   <div id="myDiv" style="position:absolute;width:590px;height:270px;left:31.4em;top:38.5em;"></div>     
+ <p id="mcb" style="position:absolute;"> <b>MCB</b </p>
+ <p id="start" style=" position:absolute;"> <b>Starter </b> </p>
+  <p id="volt" style=" position:absolute;"> <b>Voltmeter </b> </p>
+    <p id="amme" style=" position:absolute;"> <b>Ammeter </b> </p>
+	  <p id="field" style=" position:absolute;"> <b>Field Resistance </b> </p>
+	    <p id="rest" style=" position:absolute;"> <b>Armature Resistance </b> </p>
+		 <p id="mot" style=" position:absolute;"> <b> Motor </b> </p>
+		  <p id="rot" style=" position:absolute;"> <b> Rotor </b> </p>
+<script src="jsplumb1.js"></script>
+<script src="demo1.js"></script>
+       
+		<div id="one" style="position:absolute"> <strong>+</strong></div>
+<div id="two" style="position:absolute"> <strong>-</strong></div>
+<div id="three" style="position:absolute"> <strong>L</strong></div>
+<div id="four" style="position:absolute"> <strong>F</strong></div>
+<div id="five" style="position:absolute"> <strong>A</strong></div>
+<div id="six" style="position:absolute"> <strong>+</strong></div>
+<div id="seven" style="position:absolute"> <strong>-</strong></div>
+<div id="eight" style="position:absolute"> <strong>+</strong></div>
+<div id="nine" style="position:absolute"> <strong>-</strong></div>
+<div id="ten" style="position:absolute"> <strong>+</strong></div>
+<div id="ten2" style="position:absolute"> <strong>-</strong></div>
+<div id="ten4" style="position:absolute"> <strong>+</strong></div>
+<div id="ten5" style="position:absolute"> <strong>-</strong></div>
+<div id="ten7" style="position:absolute"> <strong>A1</strong></div>
+<div id="ten8" style="position:absolute"> <strong>F1</strong></div>
+<div id="ten9" style="position:absolute"> <strong>A2</strong></div>
+<div id="ten1" style="position:absolute"> <strong>F2</strong></div>
+
+	
+		<div class="dropdown" style="left:1090px;top:2em; position:absolute">
+<button onclick="dropdown();" class="dropbtn">Instuctions</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">			<p> 
+			<strong>	The following procedure is to be followed for the simulation:</strong> </p>
+				
+				<ol>
+				     <li>Make the proper Connections as per the <strong>Instructions</strong>.</li>
+					 <br>
+					 <br>
+			          <ul>
+					   <li> first of all connect the <strong> + (positive)</strong> terminal of <strong> MCB</strong> to  the <strong>(-)negative</strong> terminal of <strong>Voltmeter(V)</strong> and  to the <u>motor's A2 and F2 Port</u> respectively . </li>
+<br>					 
+					 <li> then connect <strong> - (negative) terminal </strong>of <strong>MCB </strong> to the <strong>L port  </strong>of the <b>Starter<b>.</li>
+<br>					  
+					  <li>Connect The <u>F port</u> <i>of the</i> <strong>starter</strong> <i>to the </i>  <u>positive (+) terminal</u> of the  <u>Ammeter(A). </u></li>
+<br>			
+			<li> Connect the <u>A port</u> of <u> starter</u> to the <u>positive (+) terminal </u> of the <u> Armature Resistance .</u> </li>
+<br>	
+	<li> Connect the <u>positive(+) terminal</u> of the <u>voltmeter(V)</u> to the <u>negative(-) terminal</u> of the <u>Armature Resistance</u> and to the <u> motor's A1 Port</u> Respectively</li>
+<br>				
+				<li> Connect <u>Ammeter's negative(-) terminal </u>to the <u>positive(+) </u>terminal of the <u>Field Resistance.</u></li>
+<br>					
+				
+				<li> Connect <u>Negative (-)</u>Terminal of the <u>Field Resistance</u> to the <u>Port F1 of the Motor</u>. </li>
+<br>
+                <li>Connect <u>Port A1</u> of the <u>Motor</u> to the <u> Negative (-) terminal</u> of the <u>Armature Resistance</u>.
+					
+			
+					</ul>
+					</ol>
+					  <br>
+					  <br>
+					 <br>
+					 <br> <br> <br>
+					 <p>2. Tap on the MCB to turn on the circuit.</p>
+					 <p>3. Move slider <strong></strong>second to get variations over the voltmeter readings.</p>
+					 <p>4. Then tap on    <button style="background-color:#27d447;" >&nbsp;Add to Table&nbsp;</button> Button to values to table.</p>
+					 <p>5. Repeat steps <strong> 3</strong> & <strong> 4</strong>  to add more values in table</p>
+					 <p>6.After getting 6 or more rows on table then click on <button style="background-color:#27d447;" >&nbsp;Create Graph&nbsp;</button> to make a respective graph regarding the values in above table.</p>
+                     <p>7. In order to <strong >print the page </strong> click on  <button style="background-color:#27d447;" >&nbsp;Print&nbsp;</button> button .</p>					
+			
+                   
+                    
+                   
+                    
+                    </a>
+</div>
+</div>
+<style>
+
+</style>
+		<script>
+		
+		function dropdown() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+		</script>
+		
+		<!--<p id="sgraph"> <b>Speed</b> </p>
+		<p id="vgraph"> <b> Voltage</b> </p>
+		<style type="text/css">
+		
+		#vgraph
+		{
+	top:54.8em;
+		left:50em;
+		position:absolute;
+		
+		}
+		
+		
+		#sgraph
+		{
+	top:45.8em;
+		left:31em;
+		position:absolute;
+		writing-mode: vertical-rl;
+        text-orientation: mixed;
+		}
+		
+		</style>
+-->
+</body>
 </html>
-
