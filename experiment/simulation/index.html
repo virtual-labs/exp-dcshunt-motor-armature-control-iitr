@@ -2,14 +2,15 @@
  "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-<title>
- Speed Control of DC motor by armature resistance control </title>
+<title>Virtual Labs | Speed Control of DC motor by armature resistance control </title>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="vlab logo.jpg">
+
 <script src="script.js"></script>
 
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -53,7 +54,7 @@ margin:0px;
 div
 {
   resize: both;
-  overflow: ;
+  /* overflow: ; */
 }
 #wrapper {
   width:100%;
@@ -104,7 +105,7 @@ div
   padding: 10px;
   height: 300px;
   border-style: solid; 
-  border-right: : none;
+  /* border-right: : none; */
 }
 
 
@@ -291,49 +292,47 @@ left:43em;
   cursor: pointer;
 }
 
-.dropbtn {
+ .dropbtn {
     background-color: #27d447;
     color: white;
-    padding: 16px;
+    padding: 10px 8px;
     font-size: 16px;
-    border: none;
+    border: 2px solid black;
     cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+/*.dropbtn:hover, .dropbtn:focus {
     background-color: #3e8e41;
-}
+} */
 
 .dropdown {
     position: relative;
     display: inline-block;
-	   vertical-align: left;
+	  vertical-align: left;
 }
 
 .dropdown-content {
-    display: none;
-    position: relative;
-    background-color: #ECF0F5;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px #ECF0F5;
+    visibility: hidden;
+    width: 375px;
+    background:white;
+    color: black;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 15px;
+    position: absolute;
     z-index: 1;
 }
 
-.dropdown-content a {
-    color: rgb(0,0,225);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-	text-align: left;
-    vertical-align: left;
-	  width:16em;
-	  height:30em;
-	  overflow-x:auto;
-	  overflow-y:auto;
-
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    position: absolute;
+    margin-left: -260px;
+    padding-left: 5px;
+    z-index: 1;
+    
 }
 
-.dropdown a:hover {background-color: #ECF0F5}
+.dropdown:hover {background-color: rgb(27, 75, 27)}
 
 .show {display:block;}
 
@@ -349,44 +348,44 @@ left:43em;
   <div class="jtk-demo-main" data-demo-id="animation" >
     <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
       <div id="wrapper" style="position:absolute; top:10px;width:1000px;left:200px">
-        <div class="littledot" id="ld1"></br></br><a href="#" class="cmdLink detach" rel="ld1"></a>
+        <div class="littledot" id="ld1"></br></br><a href="#" class="cmdLink detach" rel="ld1"><div style="color:blue;font-weight: bold;" id="rem1">B</div></a>
         </div>
-        <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2"></a>
+        <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2"><div style="color:blue;font-weight: bold;" id="rem2">R</div></a>
         </div><!--
         <div class="littledot" id="ld3"></br></br><a href="#" class="cmdLink detach" rel="ld3"></a>3
         </div>-->
-        <div class="littledot" id="ld4"></br></br><a href="#" class="cmdLink detach" rel="ld4"></a>
+        <div class="littledot" id="ld4"></br></br><a href="#" class="cmdLink detach" rel="ld4"><div style="color:blue;font-weight: bold;" id="rem4">C</div></a>
         </div>
-        <div class="littledot" id="ld5"></br></br><a href="#" class="cmdLink detach" rel="ld5"></a>
+        <div class="littledot" id="ld5"></br></br><a href="#" class="cmdLink detach" rel="ld5"><div style="color:blue;font-weight: bold;" id="rem5">D</div></a>
         </div>
-        <div class="littledot" id="ld6"></br></br><a href="#" class="cmdLink detach" rel="ld6"></a>
+        <div class="littledot" id="ld6"></br></br><a href="#" class="cmdLink detach" rel="ld6"><div style="color:blue;font-weight: bold;" id="rem6">E</div></a>
         </div>
-        <div class="littledot" id="ld7"></br></br><a href="#" class="cmdLink detach" rel="ld7"></a>
-        </div>
-		
-        <div class="littledot" id="ld8"></br></br><a href="#" class="cmdLink detach" rel="ld8"></a>
-        </div>
-        <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9"></a>
-        </div>
-        <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10"></a>
-        </div>
-        <div class="littledot" id="ld11"></br></br><a href="#" class="cmdLink detach" rel="ld11"></a>
+        <div class="littledot" id="ld7"></br></br><a href="#" class="cmdLink detach" rel="ld7"><div style="color:blue;font-weight: bold;" id="rem7">G</div></a>
         </div>
 		
-        <div class="littledot" id="ld12"></br></br><a href="#" class="cmdLink detach" rel="ld12"></a>
+        <div class="littledot" id="ld8"></br></br><a href="#" class="cmdLink detach" rel="ld8"><div style="color:blue;font-weight: bold;" id="rem8">H</div></a>
         </div>
-        <div class="littledot" id="ld13"></br></br><a href="#" class="cmdLink detach" rel="ld13"></a>
+        <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9"><div style="color:blue;font-weight: bold;" id="rem9">I</div></a>
         </div>
-        <div class="littledot" id="ld14"></br></br><a href="#" class="cmdLink detach" rel="ld14"></a>
+        <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10"><div style="color:blue;font-weight: bold;" id="rem10">J</div></a>
         </div>
-        <div class="littledot" id="ld15"></br></br><a href="#" class="cmdLink detach" rel="ld15"></a>
+        <div class="littledot" id="ld11"></br></br><a href="#" class="cmdLink detach" rel="ld11"><div style="color:blue;font-weight: bold;" id="rem11">K</div></a>
         </div>
 		
-        <div class="littledot" id="ld16"></br></br><a href="#" class="cmdLink detach" rel="ld16"></a>
+        <div class="littledot" id="ld12"></br></br><a href="#" class="cmdLink detach" rel="ld12"><div style="color:blue;font-weight: bold;" id="rem12">A1</div></a>
         </div>
-        <div class="littledot" id="ld17"></br></br><a href="#" class="cmdLink detach" rel="ld17"></a>
+        <div class="littledot" id="ld13"></br></br><a href="#" class="cmdLink detach" rel="ld13"><div style="color:blue;font-weight: bold;" id="rem13">F1</div></a>
         </div>
-        <div class="littledot" id="ld18"></br></br><a href="#" class="cmdLink detach" rel="ld18"></a>
+        <div class="littledot" id="ld14"></br></br><a href="#" class="cmdLink detach" rel="ld14"><div style="color:blue;font-weight: bold;" id="rem14">A2</div></a>
+        </div>
+        <div class="littledot" id="ld15"></br></br><a href="#" class="cmdLink detach" rel="ld15"><div style="color:blue;font-weight: bold;" id="rem15">F2</div></a>
+        </div>
+		
+        <div class="littledot" id="ld16"></br></br><a href="#" class="cmdLink detach" rel="ld16"><div style="color:blue;font-weight: bold;" id="rem16">L</div></a>
+        </div>
+        <div class="littledot" id="ld17"></br></br><a href="#" class="cmdLink detach" rel="ld17"><div style="color:blue;font-weight: bold;" id="rem17">F</div></a>
+        </div>
+        <div class="littledot" id="ld18"></br></br><a href="#" class="cmdLink detach" rel="ld18"><div style="color:blue;font-weight: bold;" id="rem18">A</div></a>
         </div>
 
 		
@@ -440,7 +439,7 @@ left:43em;
 
 			</div>
 			<div style="position:absolute;left:56em;top:10em;">
-			<input id="reset" type="reset" onclick="window.location.href = 'main.html';" value="Reset" size="15">
+			<input id="reset" type="reset" onclick="window.location.href = 'index.html'" value="Reset" size="15">
 			<style>
 				#reset{
             background-color: #27d447;
@@ -460,9 +459,9 @@ left:43em;
 
     background-color: #27d447;
     color: white;
-	height:3.2em;
+	  height:3.2em;
 	}
-		#btn_table:hover,	#btn_table:focus {
+		#btn_table:hover{
     background-color: #3e8e41;
 }
 	</style>
@@ -496,16 +495,18 @@ left:43em;
         </div>    
 		</div>
         <div class="column301" >
-          <div  class="machine" style="position: relative; left:32em; top:3em; boder-style:solid;margin-left: 0px;width: 10em;  ">
+          <div  class="machine" style="position: relative; left:27em; top:3em; border-style:solid;margin-left: 0px;width: 10em;  ">
               <img src="rotor part 1.png" class="rotate1" height="150px"  />
               <img src="rotor part 2.png" class="rotate" id="cirmover2" height="50px" style="position: absolute;
                 top: 50px;
                 left: 50px;
 "	/>
             </div>
+            <div style="margin-left: -100px;">
             <div id="box1" class="boxed" style="position: relative; left: 8.5em ;top:-9.3em;width: 18em;height: 14.5em;border: solid;">
             <div id ="box2"class="boxed" style="position: relative; left: 1em ;top:2.0em;width: 16em;height: 10.5em;">
-		   <img src="motor1.png" id="motor" style="position: absolute; left:1em; top:-.1em; length:9em;width:13em;boder-style:solid;margin-left: 0px; "/>
+		   <img src="motor1.png" id="motor" style="position: absolute; left:1em; top:-.1em; length:9em;width:13em;border-style:solid;margin-left: 0px; "/>
+       </div>
 		   <!--this style is used for flipping a image-->
 		   <style>
 		   #motor{
@@ -521,55 +522,64 @@ left:43em;
           </div>
         </div>
         <div class="column401"
-        <div id="table" style="background-color: #ecf0f5;position:absolute; top:37.29em;width:312px;height:300px;left:-.em; overflow-y: auto;">
+        <div id="table" style="background-color: #ecf0f5;position:absolute; top:37.29em;width:312px;height:300px;">
 		<div>
-		<table>
+		<table style="margin-left: 60px;">
 		<tr>
-		<td><b>OBSERVATION TABLE</B></td>
-		<td>&nbsp;<button id="graphmake" onclick="makegraph();">Create Graph </button></td>
+		<td><b>OBSERVATION TABLE</b></td>
 		</tr>
-		</table>
-		<style>
-				#graphmake{
-            background-color: #27d447;
-          color: white;
-	}
+  </table>
+  
 	
-	#graphmake:hover,#graphmake:focus {
-    background-color: #3e8e41;
-}
-	
-		</style>
-	
-		</div>
-		<form>
-			<table id="mytable" width="260" border="1" style="text-align:center" >
-				<tr>
-					<th width="25">SNo.</th>
-					<th width="25">Voltage</th>
-					<th width="25">Speed</th>
-				</tr>
-			</table>
-		</form>
-		
-		</div> 
-	
-         
-        </div>
-		<div class="column501"
-        <div id="graph" style=" position:absolute; top:37.29em;width:720px;height:300px;left:18.5em; ">
-		<div id="print1">
-		<button id="prints"onclick="myFunction()"> Print</button>
+</div>
+<form>
+  <table id="mytable" width="280" border="1" style="text-align:center" >
+    <tr>
+      <th width="25">S.No.</th>
+      <th width="25">Voltage (V)</th>
+      <th width="25">Speed (RPM)</th>
+    </tr>
+  </table>
+</form>
+
+</div> 
+
+
+</div>
+<div class="column501"
+<div id="graph" style=" position:absolute; top:37.29em;width:720px;height:300px;left:18.41em; ">
+  <div id="print1">
+    <button id="prints"onclick="myFunction()"> Print</button>
+    <button id="graphmake"onclick="makegraph()"> Graph</button>
 		<style>
 				#prints{
             background-color:#27d447;
-          color: white;
-	height:3.2em;
-	width:7em;
-	}
-	#prints:hover, #prints:focus {
+            color: white;
+            cursor:pointer;
+	          height:2.6em;
+	          width:6em;
+            margin-left: 18px;
+            border: 2px solid black;
+	       }
+	#prints:hover{
     background-color: #3e8e41;
 }
+
+#graphmake{
+         position: absolute;
+         cursor:pointer;
+         margin-top: -220px;
+         margin-left: -96px;
+         height:2.6em;
+         width:6em;
+         background-color: #27d447;
+         color: white;
+         border: 2px solid black;
+       }
+       
+       #graphmake:hover{
+         background-color: #3e8e41;
+       }
 
 		</style>
 		<style>
@@ -597,7 +607,7 @@ function myFunction() {
 </div> 
 
    <div id="myDiv" style="position:absolute;width:590px;height:270px;left:31.4em;top:38.5em;"></div>     
- <p id="mcb" style="position:absolute;"> <b>MCB</b </p>
+ <p id="mcb" style="position:absolute;"> <b>MCB</b> </p>
  <p id="start" style=" position:absolute;"> <b>Starter </b> </p>
   <p id="volt" style=" position:absolute;"> <b>Voltmeter </b> </p>
     <p id="amme" style=" position:absolute;"> <b>Ammeter </b> </p>
@@ -608,7 +618,7 @@ function myFunction() {
 <script src="jsplumb1.js"></script>
 <script src="demo1.js"></script>
        
-		<div id="one" style="position:absolute"> <strong>+</strong></div>
+		<!-- <div id="one" style="position:absolute"> <strong>+</strong></div>
 <div id="two" style="position:absolute"> <strong>-</strong></div>
 <div id="three" style="position:absolute"> <strong>L</strong></div>
 <div id="four" style="position:absolute"> <strong>F</strong></div>
@@ -624,61 +634,69 @@ function myFunction() {
 <div id="ten7" style="position:absolute"> <strong>A1</strong></div>
 <div id="ten8" style="position:absolute"> <strong>F1</strong></div>
 <div id="ten9" style="position:absolute"> <strong>A2</strong></div>
-<div id="ten1" style="position:absolute"> <strong>F2</strong></div>
+<div id="ten1" style="position:absolute"> <strong>F2</strong></div> -->
 
 	
-		<div class="dropdown" style="left:1090px;top:2em; position:absolute">
-<button onclick="dropdown();" class="dropbtn">Instuctions</button>
+		<div class="dropdown" style="left:1095px;top:2.3em; position:absolute">
+<button onclick="dropdown();" class="dropbtn">Instructions</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#home">			<p> 
-			<strong>	The following procedure is to be followed for the simulation:</strong> </p>
+    
+			     
+           <b>STEP 1:</b> Make connections as per the instructions given below:<br>
 				
-				<ol>
-				     <li>Make the proper Connections as per the <strong>Instructions</strong>.</li>
-					 <br>
-					 <br>
-			          <ul>
-					   <li> first of all connect the <strong> + (positive)</strong> terminal of <strong> MCB</strong> to  the <strong>(-)negative</strong> terminal of <strong>Voltmeter(V)</strong> and  to the <u>motor's A2 and F2 Port</u> respectively . </li>
-<br>					 
-					 <li> then connect <strong> - (negative) terminal </strong>of <strong>MCB </strong> to the <strong>L port  </strong>of the <b>Starter<b>.</li>
-<br>					  
-					  <li>Connect The <u>F port</u> <i>of the</i> <strong>starter</strong> <i>to the </i>  <u>positive (+) terminal</u> of the  <u>Ammeter(A). </u></li>
-<br>			
-			<li> Connect the <u>A port</u> of <u> starter</u> to the <u>positive (+) terminal </u> of the <u> Armature Resistance .</u> </li>
-<br>	
-	<li> Connect the <u>positive(+) terminal</u> of the <u>voltmeter(V)</u> to the <u>negative(-) terminal</u> of the <u>Armature Resistance</u> and to the <u> motor's A1 Port</u> Respectively</li>
-<br>				
-				<li> Connect <u>Ammeter's negative(-) terminal </u>to the <u>positive(+) </u>terminal of the <u>Field Resistance.</u></li>
-<br>					
-				
-				<li> Connect <u>Negative (-)</u>Terminal of the <u>Field Resistance</u> to the <u>Port F1 of the Motor</u>. </li>
-<br>
-                <li>Connect <u>Port A1</u> of the <u>Motor</u> to the <u> Negative (-) terminal</u> of the <u>Armature Resistance</u>.
-					
-			
-					</ul>
-					</ol>
-					  <br>
-					  <br>
-					 <br>
-					 <br> <br> <br>
-					 <p>2. Tap on the MCB to turn on the circuit.</p>
-					 <p>3. Move slider <strong></strong>second to get variations over the voltmeter readings.</p>
-					 <p>4. Then tap on    <button style="background-color:#27d447;" >&nbsp;Add to Table&nbsp;</button> Button to values to table.</p>
-					 <p>5. Repeat steps <strong> 3</strong> & <strong> 4</strong>  to add more values in table</p>
-					 <p>6.After getting 6 or more rows on table then click on <button style="background-color:#27d447;" >&nbsp;Create Graph&nbsp;</button> to make a respective graph regarding the values in above table.</p>
-                     <p>7. In order to <strong >print the page </strong> click on  <button style="background-color:#27d447;" >&nbsp;Print&nbsp;</button> button .</p>					
-			
-                   
-                    
-                   
-                    
-                    </a>
-</div>
-</div>
-<style>
+           <table style="margin-left: 20px;font-size: 21px;font-style: sans-serif;">
+            <tr>
+                <td style="border:1px solid black;"><b>From</b></td>
+                <td style="border:1px solid black;">R</td>
+                <td style="border:1px solid black;">B</td>
+                <td style="border:1px solid black;">B</td>
+                <td style="border:1px solid black;">B</td>
+                <td style="border:1px solid black;">F</td>
+                <td style="border:1px solid black;">A</td>
+                <td style="border:1px solid black;">G</td>
+                <td style="border:1px solid black;">I</td>
+                <td style="border:1px solid black;">C</td>
+                <td style="border:1px solid black;">A1</td>
+                <td style="border:1px solid black;">K</td>
+              
+            </tr>
+            <tr>
+                <td style="border:1px solid black;"><b>To</b></td>
+                <td style="border:1px solid black;">L</td>
+                <td style="border:1px solid black;">D</td>
+                <td style="border:1px solid black;">A2</td>
+                <td style="border:1px solid black;">F2</td>
+                <td style="border:1px solid black;">E</td>
+                <td style="border:1px solid black;">J</td>
+                <td style="border:1px solid black;">H</td>
+                <td style="border:1px solid black;">F1</td>
+                <td style="border:1px solid black;">A1</td>
+                <td style="border:1px solid black;">K</td>
+                <td style="border:1px solid black;">C</td>
+               
+            </tr>
+        </table><br>
 
-</style>
+           <p><b>NOTE: If wire is wrongly connected, Click on node number to detach the wire.</b></p>
+					 
+					 <p><b>STEP 2:</b> Click on <button style="background-color:#27d447;" >&nbsp;Check&nbsp;</button> button for checking the connections.</p>
+					 <p><b>STEP 3:</b> Click on MCB to turn on the supply.</p>
+					 <p><b>STEP 4:</b> Now, move the second slider to get corresponding values of Voltmeter and Speedometer.</p>
+					 <p><b>STEP 5:</b> Click on <button style="background-color:#27d447;" >&nbsp;Add to Table&nbsp;</button> button to add values to the observation table.</p>
+					 <p><b>STEP 6:</b> Repeat steps 4 to 5 to add more values in table.</p>
+					 <p><b>STEP 7:</b> Click on <button style="background-color:#27d447;" >&nbsp;Graph&nbsp;</button> button to make a respective graph regarding the values in table.</p>
+           <p><b>STEP 8:</b> Click on <button style="background-color:#27d447;" >&nbsp;Print&nbsp;</button> button to print the webpage.</p>					
+           <p><b>STEP 9:</b> Click on <button style="background-color:#27d447;" >&nbsp;Reset&nbsp;</button> button to reset the webpage.</p>					
+			           
+</div>
+</div>
+
+
+ <footer>
+  <p>Copyright&copy; 2019 Virtual Labs, IIT Roorkee</p>
+ </footer>
+
+
 		<script>
 		
 		function dropdown() {

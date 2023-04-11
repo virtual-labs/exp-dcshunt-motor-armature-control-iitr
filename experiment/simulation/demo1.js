@@ -552,14 +552,34 @@ jsPlumb.ready(function () {
         if ( is_connected_1_5 && is_connected_2_16 && is_connected_1_14 && is_connected_1_15 && is_connected_17_6
 		&&  is_connected_18_10 && is_connected_4_12 && is_connected_4_11 && is_connected_9_13 && is_connected_11_12
 		&&  is_connected_7_8 && !unallowed_connection_present) {
+			fun_disable();
             alert("correct connection");
 			document.getElementById('myimage').setAttribute('onclick','mcbonoff()');
-			document.getElementById('myimage').onclick=function(){mcbonoff();};
-			document.getElementById('check-button').disabled=true;
-			fun_disable();
+			document.getElementById('myimage').onclick=function(){mcbonoff();}
+            document.getElementById('check-button').disabled=true;
+
+            document.getElementById("rem1").remove();
+            document.getElementById("rem2").remove();
+            document.getElementById("rem4").remove();
+            document.getElementById("rem5").remove();
+            document.getElementById("rem6").remove();
+            document.getElementById("rem7").remove();
+            document.getElementById("rem8").remove();
+            document.getElementById("rem9").remove();
+            document.getElementById("rem10").remove();
+            document.getElementById("rem11").remove();
+            document.getElementById("rem12").remove();
+            document.getElementById("rem13").remove();
+            document.getElementById("rem14").remove();
+            document.getElementById("rem15").remove();
+            document.getElementById("rem16").remove();
+            document.getElementById("rem17").remove();
+            document.getElementById("rem18").remove();
+
             return;
+
             } else {
-               alert("WRONG CONNECTION");
+               alert("Wrong Connection");
                 return;
             } 
     });
@@ -1101,6 +1121,7 @@ function fun_disable() {
 			
 			//document.getElementById('currentValue_fixed').disabled=false;
 			fun_disable();
+            
             return;
             } else {
                alert("WRONG CONNECTION");

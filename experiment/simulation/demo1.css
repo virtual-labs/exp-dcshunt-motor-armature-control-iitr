@@ -1,5 +1,5 @@
  body {
-    background-color: #ecf0f5;
+    background-color: linen;
 
 }
   
@@ -45,202 +45,213 @@
     border: 1px solid orange;
 }
 
+footer{
+    position: absolute;
+    background-color: grey;
+    width:1029.5px;
+    height:40px;
+    color: white;
+    margin-top: 910px;
+    margin-left: 185px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+
 /** ELEMENT POSITIONS **/
 #ld1 {
     top: 9em;
-    left: 1em;
+    left: 2.6em;
 }
-#one{
-	top: 10.5em;
-    left: 13.6em;
-}
+
+
 #mcb{
-	top: 11.5em;
+	top: 12em;
     left: 13.6em;
 }
 #ld2 {
     top: 9em;
-    left: 3em;
+    left: 0.6em;
 }
-#two{
-    top: 10.5em;
-    left: 15.6em;
-}
+
 #ld3 {
     top: 9em;
     left: 5em;
 }
-#three{
-    top: 10.5em;
-    left: 19.7em;
-}
+
 #start{
-    top: 11.5em;
+    top: 12em;
     left: 21.7em;
 }
 #ld4 {
     top: 10.41em;
     left: 21em;
 }
-#four{
-    top: 10.5em;
-    left: 23em;
-}
-
 
 #ld5 {
     top: 10.41em;
     left: 27.1em;
 }
-#five {
-    top: 10.5em;
-    left: 26.7em;
-}
+
 #ld6 {
     top: 10.41em;
     left: 32em;
 }
-#six {
-    top: 11.8em;
-    left: 33.5em;
-}
 
 #volt {
     top: 12.8em;
-    left: 34.9em;
+    left: 34.6em;
 }
 
 #ld7 {
     top: 10.41em;
     left: 38em;
 }
-#seven {
-    top: 11.8em;
-    left: 40em;
-}
+
 #ld8 {
     top: 24em;
     left: 3.3em;
 }
-#eight {
-    top: 11.8em;
-    left: 44.6em;
-}
+
 #amme {
     top: 12.8em;
-    left: 46.6em;
+    left: 45.8em;
 }
-
-
 
 #ld9 {
     top: 20.6em;
     left: 14em;
-}
-#nine {
-    top: 11.8em;
-    left: 50.8em;
 }
 
 #ld10 {
     top: 32.1em;
     left: 3.3em;
 }
-#ten {
-  top: 26em;
-    left: 15.3em;
-}
+
 #field {
-   top: 27em;
-    left: 17.3em;
+   top: 26.5em;
+   left: 17.3em;
 }
-
-
 
 #ld11 {
     top: 28.67em;
     left: 14em;
 }
-#ten2 {
-  top: 22em;
-    left: 26.8em;
-}
+
 #ld12 {
     top: 20.5em;
-    left: 28.4em;
+    left: 22em;
 }
-#ten7
-{
-	top: 20.5em;
-    left: 38.4em;
-}
+
 #ld13 {
     top: 20.41em;
-    left: 44.5em;
+    left: 38em;
 }
-#ten8
-{
-	top: 20.5em;
-    left: 58.5em;
-	
-}
+
 #ld14 {
     top: 33.1em;
-    left: 28.5em;
+    left: 22em;
 }
 #rest {
-    top: 35.1em;
-    left: 15.5em;
+    top: 34.5em;
+    left: 16.5em;
 }
-#ten9 {
-    top: 33.1em;
-    left: 38.4em;
-}
+
 #mot {
-    top: 36.1em;
-    left: 46.4em;
+    top: 35.1em;
+    left: 41em;
 }
 #rot {
     top: 33.1em;
-    left: 66.4em;
+    left: 62.4em;
 }
 #ld15 {
     top: 33.1em;
-    left: 44.5em;
+    left: 38em;
 }
-#ten1 {
-    top: 33.1em;
-    left: 58.5em;
-}
-
-
 
 #ld16 {
     top: 9em;
     left: 7em;
 }
-#ten4
-{
-    top: 33.4em;
-    left: 15.3em;
-}
+
 #ld17 {
     top: 9em;
     left: 10.5em;
 }
-#ten5
-{
-	  top: 29.9em;
-    left: 27em;
-}
+
 #ld18 {
     top: 9em;
     left: 14em;
 }
 
+#rem1{
+    margin-top: -33px;
+}
 
+#rem2{
+    margin-top: -33px;
+}
 
+#rem4{
+    margin-top: -33px;
+}
 
+#rem5{
+    margin-top: -33px;
+}
+
+#rem6{
+    margin-top: -33px;
+}
+
+#rem7{
+    margin-top: -33px;
+}
+
+#rem8{
+    margin-top: -29px;
+}
+
+#rem9{
+    margin-top: -29px;
+}
+
+#rem10{
+    margin-top: -29px;
+}
+
+#rem11{
+    margin-top: -29px;
+}
+
+#rem12{
+    margin-top: -33px;
+}
+
+#rem13{
+    margin-top: -33px;
+}
+
+#rem14{
+    margin-top: -30px;
+}
+
+#rem15{
+    margin-top: -30px;
+}
+
+#rem16{
+    margin-top: -33px;
+}
+
+#rem17{
+    margin-top: -33px;
+}
+
+#rem18{
+    margin-top: -33px;
+}
 
 
 path, .jtk-endpoint {
