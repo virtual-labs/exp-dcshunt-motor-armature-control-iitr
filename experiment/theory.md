@@ -2,7 +2,11 @@
 
 We know that the speed of DC motor is given by:<br>
 
-$$N = \frac{V-I_aR_a}{kФ}$$
+<center>
+
+N = (V-I<sub>a</sub>R<sub>a</sub>)/kФ 
+
+</center>
 
 The above equation shows that the speed depends upon the supply voltage V, the armature circuit resistance Ra, and the field flux Ф, which is produced by the field current. In practice, the variation of these three factors is used for speed control. Thus, there are three general methods of speed control of D.C. Motors.<br>
 
