@@ -4,7 +4,7 @@ We know that the speed of DC motor is given by:<br>
 
 <center>
 
-$$ N = \frac {V-I_aR_a} {kФ} $
+N = (V-I<sub>a</sub>R<sub>a</sub>)/kФ $
 
 </center>
 
